@@ -29,7 +29,11 @@ module.exports = function(robot) {
 	robot.respond(/(latest|banter|stats)+/i, res => {
 		Statslib.generateStats(chatLogFile)
 			.then(data => {
-				res.send(JSON.stringify(data));
+				res.send(
+					"```\n" + 
+					JSON.stringify(data, null, 2) +
+					"```"
+				);
 			})
 			.catch(winston.error)
 	});
