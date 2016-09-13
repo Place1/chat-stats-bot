@@ -34,7 +34,7 @@ module.exports = function(robot) {
 			.catch(winston.error)
 	});
 
-	robot.respond('help', res => {
+	robot.respond(/help/i, res => {
 		return res.send(
 			'type ```stats-bot latest banter stats``` or some variation'
 		)

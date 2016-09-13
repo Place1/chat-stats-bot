@@ -5,7 +5,7 @@ const path = require('path');
 
 const adapterPath = path.resolve(__dirname);
 const adapterName = process.env.ADAPTER || 'shell';
-const enableHttpd = true;
+const enableHttpd = false ;
 const botName = 'stats-bot';
 const botAlias = '/';
 
