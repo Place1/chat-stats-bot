@@ -30,7 +30,7 @@ module.exports = function(robot) {
 		Statslib.generateStats(chatLogFile)
 			.then(data => {
 				res.send(
-					"```\n" + 
+					"```\n" +
 					JSON.stringify(data, null, 2) +
 					"```"
 				);
@@ -40,7 +40,7 @@ module.exports = function(robot) {
 
 	robot.respond(/help/i, res => {
 		return res.send(
-			'type ```stats-bot latest banter stats``` or some variation\n' +
+			'type ```@statsbot latest banter stats``` or some variation\n' +
 			'github ```https://github.com/Place1/chat-stats-bot```'
 		)
 	})
